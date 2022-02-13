@@ -4,6 +4,7 @@ let lang = 'ru';
 
 const getJokeBtn = document.querySelector('.getJoke__button');
 let textJoke = document.querySelector('.joke__text');
+let quoteAuthor = document.querySelector('.class_quote_author');
 const ruLangBtn = document.querySelector('.ruLang');
 const enLangBtn = document.querySelector('.enLang');
 const picture = document.querySelector('.picture___img ');
@@ -50,6 +51,7 @@ async function getData() {
     max = Math.floor(data.length);
     let random = Math.floor(Math.random() * (max - min)) + min;  
     textJoke.textContent = `"${data[random].text}"`; 
+    quoteAuthor.textContent = `"${data[random].author}"`;
     setTimeout(()=>picture.classList.remove('rotate'), 1000);
 }  
 
