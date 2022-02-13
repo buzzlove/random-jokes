@@ -1,5 +1,5 @@
 const urlEn = 'https://type.fit/api/quotes';
-const urlRu = '/assets/json/quotes.json';
+const urlRu = './assets/json/quotes.json';
 let lang = 'ru';
 
 const getJokeBtn = document.querySelector('.getJoke__button');
